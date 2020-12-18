@@ -49,7 +49,7 @@
 }).
 
 %% macros
--define(RECONNECT_TIMEOUT_MS, 5000).
+-define(RECONNECT_TIMEOUT_MS, application:get_env(pgpool, reconnect_timeout_ms, 5000)).
 -define(RETRY_SLEEP_MS, 1000).
 
 %% includes
